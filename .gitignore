@@ -1,0 +1,27 @@
+node_modules/
+.env
+credentials.json
+.gmail_token.json
+.local_state.json
+.local_admin_token
+.wwebjs_auth/
+.wwebjs_cache/
+*.log
+
+.baileys_auth/
+
+# Do not publish credentials, sessions, account data, backups, or tokens
+.env.*.local
+*.pem
+*.key
+*.p12
+.local_*
+.gmail_*
+.baileys_auth*/
+.gmail_v*/
+FIX_*BACKUP*/
+*.bak
+*.zip
+*.sqlite
+*.db
+.DS_Store

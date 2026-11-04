@@ -1,0 +1,124 @@
+BUSINESSREPLY AI — HOW TO RUN
+=========================================
+WhatsApp + Gmail AI Customer Support | Windows PC
+This is a SOURCE project, not an APK or a hosted 24/7 service.
+
+ગુજરાતીમાં: કેવી રીતે શરૂ કરવું?
+-----------------------------------------
+1) આ ZIP Extract કરો અને 'businessreply-ai' Folder ખોલો.
+2) Node.js (supported recent stable version), npm અને Git for Windows Install કરેલા હોવા જોઈએ.
+   Check: node --version   |   npm.cmd --version   |   git --version
+3) એ જ Folderમાં business.txt ખોલો (અથવા Dashboard > Business Profile થી Edit કરો). તેમાં તમારા BUSINESSનું સાચું નામ, માહિતી,
+   Products/Services, સાચી કિંમતો, Time, Order Link, Rules અને FAQ (Question/Answer)
+   લખો. દરેક Example/Placeholder તમારી માહિતીથી બદલો.
+4) બધું ચેક કરીને business.txt માં ACTIVE=NO ને ACTIVE=YES કરો.
+5) .env.example ની copy બનાવી તેનું નામ .env રાખો.
+   Example — Gemini વાપરવું હોય તો .env માં:
+      AI_PROVIDER=gemini
+      GEMINI_API_KEY=YOUR_OWN_PRIVATE_KEY
+      AI_MODEL=gemini-3.1-flash-lite
+   તમારી સચ્ચી Key .env માં જ નાખવી; અહીં/ GitHub પર ક્યારેય શેર નહીં કરવી.
+6) START_WINDOWS.bat પર Double Click કરો.
+   પહેલી વાર npm dependencies install થશે. Internet અને Git જરૂરી હોઈ શકે.
+7) CMD Windowમાં જે local dashboard URL/ private launch link દેખાય તે તમારા
+   PCના Browserમાં ખોલો. એ Link કોઈ બીજા સાથે શેર ન કરશો.
+8) પહેલાં "Send real AI request" થી તમારા Businessના પ્રશ્નો ટેસ્ટ કરો.
+9) WhatsApp: Dashboardમાંથી QR Scan કરો. આ UNOFFICIAL Linked Device integration છે.
+   Account restrictionનું જોખમ છે. Public commercial use માટે Official Meta
+   WhatsApp Business Cloud API વધુ યોગ્ય છે.
+10) Gmail: Google Cloudમાં Gmail API Enable કરો, Desktop OAuth Client બનાવો,
+    downloaded JSON ને 'credentials.json' નામે આ જ Folderમાં મૂકો,
+    અને Dashboardમાંથી Google Sign-In કરીને Account Connect કરો.
+    Gmail Login માટે QR નથી.
+11) બંને Auto Reply switches શરૂઆતમાં OFF છે. તમારાં પોતાના Test Accountsથી
+    સાચા જવાબ ચકાસ્યા પછી જ એક-એક Auto Reply ON કરજો. ON હોય તો સાચા
+    WhatsApp/Email Replies મોકલાઈ શકે છે.
+12) Agent બંધ કરવો હોય તો CMD Windowમાં Ctrl+C દબાવો અથવા Window બંધ કરો.
+    PC બંધ હોય તો Local Agent પણ બંધ રહેશે.
+
+business.txt માં શું લખવું?
+-----------------------------------------
+બે વસ્તુ લખી શકાય: (A) BUSINESS વિશે સાચી માહિતી, (B) ગ્રાહકના સામાન્ય
+સવાલો અને તેમના ચોક્કસ જવાબો. માત્ર પ્રશ્નો નહીં — FAQમાં Q: સાથે A: લખો.
+ઉદાહરણ (આપણે સાચી માહિતી આપવી):
+
+  ABOUT:
+  We provide photo printing.
+
+  PRODUCTS_AND_SERVICES:
+  Photo prints — [enter your real published price]
+
+  FAQ:
+  Q: What are your opening hours?
+  A: [enter your real working hours]
+
+  Q: How can I order?
+  A: [enter your actual ordering method/link]
+
+* પહેલા placeholders કાઢીને સાચી વિગતો લખો, પછી ACTIVE=YES કરો.
+* ભાવ, website, return policy, stock વગેરે ખોટાં ન લખો.
+* API Key / Password / OTP / Customer data business.txt માં ન રાખો.
+* business.txt બદલો તો આગલા નવા AI replyથી નવી માહિતી વાંચાશે;
+  .env બદલો તો server restart કરવો પડે.
+
+HOW TO RUN — ENGLISH
+-----------------------------------------
+1. Extract ZIP and open the 'businessreply-ai' folder.
+2. Install Node.js, npm and Git for Windows.
+3. Fill business.txt with REAL business details and FAQ Q:/A: pairs.
+4. Set ACTIVE=YES in business.txt only after reviewing the details.
+5. Copy .env.example to .env; configure ONE provider (Gemini, OpenAI or
+   compatible local endpoint). API keys belong only in .env.
+6. Double-click START_WINDOWS.bat. It installs dependencies on first launch.
+7. Open the private localhost dashboard link shown in the console.
+8. Test AI answers before enabling any outgoing auto replies.
+9. Optionally link WhatsApp by QR (unofficial) and Gmail via Google OAuth.
+10. When connected, use a separate test account to verify replies and
+    then explicitly enable auto replies only if acceptable.
+11. Close the window to stop the server. It runs only while your PC is on.
+
+Troubleshooting
+-----------------------------------------
+• 'spawn git' or 'git not found': Install Git for Windows, reopen terminal,
+  run git --version and restart START_WINDOWS.bat.
+• 'Cannot find module dotenv': npm install failed. Fix the FIRST npm error,
+  then run START_WINDOWS.bat. Do not run npm audit fix --force blindly.
+• 'EADDRINUSE' / port occupied: Launcher tries to choose an available local port;
+  use the NEW link in its CMD window, not an old saved tab.
+• Gemini 400/429/503: Check .env model and API key, quota/credits and provider
+  availability. These are different from WhatsApp/Gmail connection errors.
+• 'No answer': Confirm business.txt ACTIVE=YES, valid business name, AI test
+  working, channel CONNECTED and Auto Reply ON. Check dashboard diagnostics.
+• Gmail 403: OAuth app in Testing requires the connected Google account to
+  be added under Google Cloud Audience > Test users.
+• Gmail credentials missing: Put your own credentials.json next to START_WINDOWS.bat.
+
+Privacy & Safety
+-----------------------------------------
+NEVER upload these to GitHub:
+.env, credentials.json, .gmail_token.json, .local_admin_token,
+.local_state.json, .baileys_auth/, node_modules/, logs.
+Customer messages go to the configured AI provider. Tell customers an
+AI is responding. Review privacy/consent and relevant platform requirements.
+The linked-device WhatsApp integration is unofficial and can break.
+Only the official Meta Business API is advisable for a public commercial system.
+This ZIP does not prove that your personal WhatsApp/Gmail accounts can connect:
+test them locally before relying on them.
+
+NEW PREMIUM UI: After unlocking the dashboard, use the left-side menu:
+Overview / Channels / AI Playground / Business Profile / Activity / Settings.
+Business Profile > Save changes writes business.txt in the project and turns both auto-reply switches OFF for review.
+
+NEW: Dashboard > Business Profile > Edit business.txt > Save changes. The file stays inside the project. Save turns both auto replies OFF until reviewed.
+
+
+GITHUB UPLOAD / GitHub પર Upload કેવી રીતે કરવું
+--------------------------------------------------
+1. આ ZIP ને Extract કરો.
+2. businessreply-ai Folder ખોલો.
+3. UPLOAD_TO_GITHUB.bat પર Double Click કરો.
+4. GitHub login browserમાં ખૂલે તો તમારા GitHub Accountથી મંજૂરી આપો.
+5. SUCCESS આવે પછી https://github.com/yamikpatel380-gif/businessreply-ai ખોલો.
+
+આ Upload Script માત્ર આ Repository માટે છે; `.env`, personal API credentials, Gmail/WhatsApp session files ન ઉમેરશો. કોઈ GitHub token આ ચેટમાં ન મોકલશો.
+If an error occurs, leave the repo unchanged; no force push is used.

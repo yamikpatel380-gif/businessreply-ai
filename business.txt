@@ -1,0 +1,46 @@
+# BUSINESSREPLY AI — BUSINESS INFORMATION + QUESTIONS AND ANSWERS
+# Owner: fill this file with your OWN real business details.
+# ગુજરાતી: અહીં તમારા Businessની માહિતી અને ગ્રાહકોના પ્રશ્ન-જવાબ લખવાના છે.
+# DO NOT add passwords, OTPs, API keys, private phone numbers or customer records.
+# Instructions: see HOW_TO_RUN.txt. Start with ACTIVE=NO until the profile is ready.
+
+ACTIVE=NO
+BUSINESS_NAME=Your Business Name
+BUSINESS_WEBSITE=
+
+ABOUT:
+# Write WHAT your business does, who you serve and where you operate.
+# Remove these instruction comments and enter your own factual description.
+
+PRODUCTS_AND_SERVICES:
+# List each real product/service; include the true published price when known.
+
+OPENING_HOURS:
+# Your real business hours / weekly closed days.
+
+ORDERING:
+# Explain the real method of ordering. Give only the VERIFIED public URL.
+
+SUPPORT_CONTACT:
+# Public business email or public support number only.
+
+POLICIES:
+# Real delivery, refund, return and cancellation terms, if applicable.
+
+FAQ:
+# YES: include COMMON CUSTOMER QUESTIONS AND CORRECT ANSWERS.
+# For each question use Q: and A: on separate lines.
+# Example format (replace the commented examples with TRUE answers):
+# Q: What do you sell?
+# A: We offer [your real products or services].
+#
+# Q: What is the price?
+# A: [your actual published prices or say contact us for pricing].
+#
+# Q: Where can I buy?
+# A: [your real ordering process or verified public website].
+#
+# Q: Do you offer delivery?
+# A: [your actual delivery policy].
+#
+# A real FAQ must include the answer, not just the question.

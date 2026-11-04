@@ -1,0 +1,20 @@
+BusinessReply AI — Premium UI Test Report
+Date: 2026-11-04
+
+57/57 Node.js unit and logic tests passed (no external accounts required).
+Node syntax checks: app.js and server.mjs passed.
+Browser-only rendered UI tests using mocked, disconnected statuses:
+ - Admin login UI
+ - Navigation
+ - Channels screen
+ - Business Profile load/edit/save and confirmation popup
+ - AI error display
+ - Mobile navigation
+ - No JavaScript page errors observed
+
+LIMITATIONS:
+- Browser tests mock responses for display/interaction only, not live external services.
+- No real WhatsApp QR scan, Gmail sign-in, or Gemini API call was performed in this session.
+- Launch on Windows with START_WINDOWS.bat and authorize accounts locally.
+- The standalone UI_PREVIEW.html is a read-only visual preview; not a service.
+- WhatsApp Baileys is unofficial and may be unreliable/restricted.
